@@ -1,6 +1,7 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = (webpackConfigEnv, argv) => {
   const orgName = "organization";
@@ -22,6 +23,11 @@ module.exports = (webpackConfigEnv, argv) => {
           isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
           orgName,
         },
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          { from: 'src/assets', to: 'assets' }
+        ]
       }),
     ],
   });
