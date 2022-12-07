@@ -5,7 +5,7 @@
     left: 0;
     width: 225px;
     height: 100vh;
-    padding: 0px 0;
+    padding: 20px 0;
     transition: all 0.5s ease;
 }
 
@@ -57,7 +57,7 @@
 
 .main {
     margin-left: 225px;
-    padding: 0px 10px;
+    padding: 0px 0px;
 }
 
 .bottom {
