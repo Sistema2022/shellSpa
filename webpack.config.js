@@ -26,7 +26,8 @@ module.exports = (webpackConfigEnv, argv) => {
       }),
       new CopyWebpackPlugin({
         patterns: [
-          { from: 'src/assets', to: 'assets' }
+          { from: 'src/assets', to: 'assets' },
+          { from: 'src/style.css', to: 'style.css' }
         ]
       }),
     ],
